@@ -16,12 +16,14 @@ if (isset($_GET["id"])) {
         alert('Task Deleted');
         window.location='../home.php';
         </script>";
+        exit();
         
     }else {
         echo "<script>
         alert('Failed to delete task');
         window.location='../home.php';
         </script>";
+        exit();
         
     }
 
