@@ -12,11 +12,17 @@ if (isset($_GET["id"])) {
     $sql->bind_param("ii",$task_id,$user_id);
 
     if ($sql->execute()) {
-        echo "<script>alert('Task Deleted')</script>";
-        header("Location:../home.php");
+        echo "<script>
+        alert('Task Deleted');
+        window.location='../home.php';
+        </script>";
+        
     }else {
-        echo "<script>alert('Failed to delete task')</script>";
-        header("Location:../home.php");
+        echo "<script>
+        alert('Failed to delete task');
+        window.location='../home.php';
+        </script>";
+        
     }
 
 }
