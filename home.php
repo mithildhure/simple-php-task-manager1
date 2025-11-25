@@ -3,6 +3,11 @@
 SESSION_START();
 include 'db.php';
 
+if (!isset($_SESSION["u_id"])) {
+    header("Location:login.php");
+    exit();
+}
+
 $user_id = $_SESSION["u_id"];
 
 $stmt = $conn->prepare("select t_id, task_title, task_desc, task_deadline from tasks where user_id = ?");

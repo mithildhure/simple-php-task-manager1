@@ -3,6 +3,11 @@
 SESSION_START();
 include '../db.php';
 
+if (!isset($_SESSION["u_id"])) {
+    header("Location:../login.php");
+    exit();
+}
+
 if (isset($_GET["id"])) {
     
     $user_id = $_SESSION["u_id"];

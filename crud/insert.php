@@ -2,6 +2,11 @@
 SESSION_START();
 include '../db.php';
 
+if (!isset($_SESSION["u_id"])) {
+    header("Location:../login.php");
+    exit();
+}
+
 if ($_SERVER["REQUEST_METHOD"]==="POST") {
     $title = $_POST["title"];
     $desc = $_POST["desc"];
