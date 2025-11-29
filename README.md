@@ -10,14 +10,14 @@ A simple php task manager with crud and Registration/Login
 Can Perform Simple Crud Operations Like Add,Update,Delete and Show tasks, Used Php Sessions for better user management with login and logout
 
 ### Login Page
-![Login Page](c:\Users\Lenovo\Pictures\task_manager\t_login.png "Login")
+![Login Page](images/t_login.png "Login")
 
 
 ### Register Page
-![Register Page](c:\Users\Lenovo\Pictures\task_manager\t_register.png "Register")
+![Register Page](images/t_register.png "Register")
 
 ### Home Page
-![Home Page](c:\Users\Lenovo\Pictures\task_manager\t_home.png "Home")
+![Home Page](images/t_home.png "Home")
 
 ### UPDATE
 used the ***isset function***, as anyone could access the files, through url and modify through url, dont want that so now, without login, accessing home.php through url isnt possible,
