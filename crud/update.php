@@ -8,6 +8,18 @@ if (!isset($_SESSION["u_id"])) {
     exit();
 }
 
+if (isset($_GET["id"])) {
+    
+    $id = $_GET["id"];
+
+    $sql = $conn->prepare("select task_title, task_desc, task_deadline from tasks where t_id = ?");
+    $sql->bind_param("i",$id);
+    $sql->execute();
+    $tasks = $sql->get_result()->fetch_assoc();
+
+    
+}
+
 if ($_SERVER["REQUEST_METHOD"]==="POST") {
     $user_id = $_SESSION["u_id"];
     $task_id = $_GET["id"];
@@ -20,7 +32,10 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
     $sql->bind_param("sssii",$title,$desc,$deadline,$task_id,$user_id);
 
     if ($sql->execute()) {
-        echo "<script>alert('Task Updated')</script>";
+        echo "<script>
+        alert('Task Updated');
+        window.location='../home.php';
+        </script>";
     }else{
         echo "<script>alert('Failed to update task')</script>";
     }
@@ -98,6 +113,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
                     type="text"
                     class="form-control"
                     name="title"
+                    value="<?= $tasks["task_title"] ?>"
                     placeholder=""
                     required
                 />
@@ -109,6 +125,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
                     type="text"
                     class="form-control"
                     name="desc"
+                    value = "<?= $tasks["task_desc"] ?>"
                     placeholder=""
                     required
                 />
@@ -120,6 +137,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
                     type="date"
                     class="form-control"
                     name="deadline"
+                    value = "<?= $tasks["task_deadline"] ?>"
                     placeholder=""
                     required
                 />
