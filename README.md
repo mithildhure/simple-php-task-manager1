@@ -2,7 +2,8 @@
 
 A simple php task manager with crud and Registration/Login
 
-## Version 2.0 Tech used UI - Bootstrap 5 
+# Version 2.0, Tech used: 
+## UI - Bootstrap 5 
 ## Backend - PHP, JS
 ## Database - Mysql
 ## hosted locally with Apache (Xampp)
