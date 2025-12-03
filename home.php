@@ -73,6 +73,23 @@ $result = $stmt->get_result();
                         <a
                             name=""
                             id=""
+                            class="btn btn-primary"
+                            href="csv.php"
+                            role="button"
+                            >Get CSV</a
+                        >
+                        <a
+                            name=""
+                            id=""
+                            class="btn btn-primary mx-2"
+                            href="pdf.php"
+                            role="button"
+                            >Get Pdf</a
+                        >
+
+                        <a
+                            name=""
+                            id=""
                             class="btn btn-danger text-dark"
                             href="logout.php"
                             role="button"
