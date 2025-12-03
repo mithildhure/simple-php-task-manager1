@@ -2,12 +2,12 @@
 
 A simple php task manager with crud and Registration/Login
 
-## Version 1.5 Tech used UI - Bootstrap 5 
-## Backend - MySql 
-## Middleware - PHP 
+## Version 2.0 Tech used UI - Bootstrap 5 
+## Backend - PHP, JS
+## Database - Mysql
 ## hosted locally with Apache (Xampp)
 
-Can Perform Simple Crud Operations Like Add,Update,Delete and Show tasks, Used Php Sessions for better user management with login and logout
+Can Perform ***Crud*** Operations Like **Add,Update,Delete and Show** tasks,Generates Table in **CSV** And **PDF** Format which user can download, Used Php Sessions for better user management with login and logout.
 
 ### Login Page
 ![Login Page](images/t_login.png "Login")
@@ -19,12 +19,12 @@ Can Perform Simple Crud Operations Like Add,Update,Delete and Show tasks, Used P
 ### Home Page
 ![Home Page](images/t_home.png "Home")
 
-### UPDATE
-used the ***isset function***, as anyone could access the files, through url and modify through url, dont want that so now, without login, accessing home.php through url isnt possible,
-Also changed the ***update.php***, now you can update only what u want to, as the form now contains value of update query so u dont have to remember everything lolz.
+### UPDATE v2.0 (Beta)
+2 buttons besides logout, that helps user to get the table in pdf, or csv format, also uploaded the database. will update the images later with final 2.0 version, next updates will ***probably*** have only ui changes.
 
-#### Imp
-new update, will come soon thatll be the **v2.0**, a bigger update, will add new column, and also some useful functions, stay tuned.
+#### You Need TCPDF Library to get pdfs working
+**Install Composer, to get php libraries**
+**paste on ur cmd: composer require tecnickcom/tcpdf;**
 
 
 ### if any queries or suggestions or errors plz contact me @ linkedin : [Mithil Dhure](https://in.linkedin.com/in/mithil-dhure-b78a98257)
