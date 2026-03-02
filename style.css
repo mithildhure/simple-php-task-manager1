@@ -1,0 +1,107 @@
+/* Import a modern font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap');
+
+body {
+    /* Sleek, modern icy gradient that works perfectly with dark nav/footer */
+    background: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%); 
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh; 
+    font-family: 'Poppins', sans-serif; /* Applied to the whole page */
+}
+
+/* --- ELEVATED WELCOME HEADER --- */
+.welcome-text {
+    font-weight: 800;
+    /* This creates a gradient applied only to the text */
+    background: linear-gradient(to right, #0d6efd, #0dcaf0); /* Matches Bootstrap Primary/Info */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+}
+
+/* --- MODERN TABLE STYLING --- */
+.table-wrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden; /* Keeps the rounded corners even with the table inside */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+}
+
+.table {
+    margin-bottom: 0;
+    border: none;
+}
+
+.table thead th {
+    background-color: #212529; /* Matches your table-dark */
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+.table tbody tr {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Subtle hover effect for table rows */
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.005);
+}
+
+.table td {
+    vertical-align: middle; /* Centers text and buttons perfectly */
+    padding: 1rem;
+    border-color: #f0f0f0;
+    font-weight: 500;
+}
+
+/* --- EXISTING ELEVATIONS --- */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.custom-footer {
+    background: #212529; /* Changed to dark to match your vibe */
+    color: #fff;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    border-top: none;
+    margin-top: auto; 
+}
+
+.linkedin-link {
+    color: #0d6efd; /* Primary blue */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #0dcaf0; /* Info blue on hover */
+    text-decoration: none;
+}

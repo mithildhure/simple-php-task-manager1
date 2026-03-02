@@ -61,6 +61,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -70,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
                 class="navbar navbar-expand-sm navbar-light bg-dark p-4"
              >
                 <div class="container">
-                    <a class="navbar-brand text-primary" href="#">Update Task</a>
+                    <a class="navbar-brand text-primary" href="../home.php">Update Task</a>
                     <button
                         class="navbar-toggler d-lg-none"
                         type="button"
@@ -90,9 +91,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
                                     <span class="visually-hidden">(current)</span></a
                                 >
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link text-primary" href="#">Link</a>
-                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -171,5 +170,6 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <?php include '../footer.php'; ?>
     </body>
 </html>

@@ -37,6 +37,7 @@ $result = $stmt->get_result();
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -46,7 +47,7 @@ $result = $stmt->get_result();
                 class="navbar navbar-expand-sm navbar-light bg-dark p-4"
              >
                 <div class="container">
-                    <a class="navbar-brand text-primary" href="#">Task Manager</a>
+                    <a class="navbar-brand text-primary" href="./home.php">Task Manager</a>
                     <button
                         class="navbar-toggler d-lg-none"
                         type="button"
@@ -61,14 +62,12 @@ $result = $stmt->get_result();
                     <div class="collapse navbar-collapse" id="collapsibleNavId">
                         <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active text-primary" href="#" aria-current="page"
+                                <a class="nav-link active text-primary" href="./home.php" aria-current="page"
                                     >Home
                                     <span class="visually-hidden">(current)</span></a
                                 >
                             </li>
-                            <li class="nav-item ">
-                                <a class="nav-link text-primary" href="#">Link</a>
-                            </li>
+
                         </ul>
                         <a
                             name=""
@@ -106,7 +105,7 @@ $result = $stmt->get_result();
         <div
             class="container"
         >
-            <h2 class="p-2 my-3 text-dark text-center">Welcome <?php echo $_SESSION["username"] ?></h2>
+            <h2 class="p-2 my-3 text-center welcome-text">Welcome <?php echo $_SESSION["username"] ?></h2>
         </div>
         
 
@@ -221,8 +220,9 @@ $result = $stmt->get_result();
         <div
             class="table-responsive"
         >
+        <div class="table-wrapper">
             <table
-                class="table table-light table-bordered"
+                class="table "
             >
                 <thead class="table-dark">
                     <tr>
@@ -263,6 +263,7 @@ $result = $stmt->get_result();
                     <?php }?>
                 </tbody>
             </table>
+            </div>
         </div>
         
 
@@ -284,5 +285,6 @@ $result = $stmt->get_result();
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <?php include 'footer.php'; ?>
     </body>
 </html>

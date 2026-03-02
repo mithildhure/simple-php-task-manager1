@@ -38,17 +38,18 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous"
         />
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
         <header>
             <!-- place navbar here -->
-             <h1 class="bg-dark text-center text-primary p-4">Register</h1>
+             <h2 class="bg-dark text-center text-primary p-3">Register</h2>
         </header>
         <main>
 
         <div
-            class="container text-center my-5 p-4 col-5 bg-dark rounded"
+            class="container text-center my-4 p-4 col-5 bg-dark rounded"
         >
         
         <form method="post" onsubmit="return validateForm()">
@@ -133,5 +134,6 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
                 return true;
             }
         </script>
+        <?php include 'footer.php'; ?>
     </body>
 </html>
