@@ -201,7 +201,7 @@ $result = $stmt->get_result();
             </div>
             </form>
             
-            <!-- Optional: Place to the bottom of scripts -->
+            
             <script>
                 const myModal = new bootstrap.Modal(
                     document.getElementById("modalId"),

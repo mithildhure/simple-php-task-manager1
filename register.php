@@ -64,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"]==="POST") {
             <label for="username">Username</label>
         </div>
         
+        <!-- Use Regex if extra authentication -->
         <div class="form-floating mb-3">
             <input
                 type="email"
